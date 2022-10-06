@@ -11,27 +11,27 @@ Il biglietto andrà stampato in pagina!
 */
 
 let agePassenger = parseInt(prompt('How old is the passenger ?'));
-let kmTrain = parseInt(prompt('How many km you have to travel ?'));
+let distanceKm = parseInt(prompt('How many km you have to travel ?'));
 const costTicket = 0.21;
 
 if(agePassenger < 18 ){
     // Ticket = 1 --> with 20% sale -> 0.8
     /* In this case DO NOT USE let or const or whatever */
-    costTrip = kmTrain * costTicket * 0.8;
+    costTrip = distanceKm * costTicket * 0.8;
 }
 else if(agePassenger > 65){
     // Ticket = 1 --> with 40% sale -> 0.6
     /* In this case DO NOT USE let or const or whatever */
-    costTrip = kmTrain * costTicket * 0.6;
+    costTrip = distanceKm * costTicket * 0.6;
 }
 else{
     /* In this case DO NOT USE let or const or whatever */
-    costTrip = kmTrain * costTicket;
+    costTrip = distanceKm * costTicket;
 }
 
 let totalCost = costTrip.toFixed(2);
 console.log('Age of the passenger: ' + agePassenger + 'years old');
-console.log('Distance traveled : ' + kmTrain + 'Km');
+console.log('Distance traveled : ' + distanceKm + 'Km');
 
 console.log('Total : ' + totalCost);
 document.getElementById("cost").innerHTML = totalCost;
